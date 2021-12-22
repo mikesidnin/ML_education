@@ -53,8 +53,9 @@ predicted_test_y = regression.predict(test_x)
 
 mae_metric = np.mean(np.absolute(predicted_test_y - test_y))
 mse_metric = np.mean((predicted_test_y - test_y) ** 2)
-r2_score_metric = r2_score(test_y , predicted_test_y)
+r2_score_metric = r2_score(test_y, predicted_test_y)
 
+print("---------------CO2EMISSIONS prediction metrics by ENGINESIZE-------------------")
 print("Mean absolute error: " + str(mae_metric))
 print("Residual sum of squares (MSE): " + str(mse_metric))
 print("R2-score: " + str(r2_score_metric))
@@ -62,3 +63,26 @@ print("R2-score: " + str(r2_score_metric))
 # print("Mean absolute error: %.2f" % np.mean(np.absolute(test_y_ - test_y)))
 # print("Residual sum of squares (MSE): %.2f" % np.mean((test_y_ - test_y) ** 2))
 # print("R2-score: %.2f" % r2_score(test_y , test_y_) )
+
+# Exercise
+
+# Getting new train and test arrays
+fuel_train_x = np.asanyarray(train[['FUELCONSUMPTION_COMB']])
+fuel_test_x = np.asanyarray(test[['FUELCONSUMPTION_COMB']])
+
+# Train by new X and old Y
+fuel_regression = linear_model.LinearRegression()
+fuel_regression.fit(fuel_train_x, train_y)
+
+# Predict
+fuel_predictions = fuel_regression.predict(fuel_test_x)
+
+# Metrics
+fuel_mae_metric = np.mean(np.absolute(fuel_predictions - test_y))
+fuel_mse_metric = np.mean((fuel_predictions - test_y) ** 2)
+fuel_r2_score_metric = r2_score(test_y, fuel_predictions)
+
+print("---------------CO2EMISSIONS prediction metrics by FUELCONSUMPTION_COMB-------------------")
+print("Mean absolute error: " + str(fuel_mae_metric))
+print("Residual sum of squares (MSE): " + str(fuel_mse_metric))
+print("R2-score: " + str(fuel_r2_score_metric))
