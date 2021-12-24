@@ -23,7 +23,7 @@ test = dataset_columns[~msk]
 plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS,  color='blue')
 plt.xlabel("Engine size")
 plt.ylabel("Emission")
-# plt.show()
+plt.show()
 
 # Step 3
 # Using sklearn package to model data.
@@ -34,8 +34,8 @@ regression.fit(train_x, train_y)
 
 theta_1 = regression.coef_
 theta_0 = regression.intercept_
-print ('Coefficients: ', theta_1)
-print ('Intercept: ', theta_0)
+print('Coefficients: ', theta_1)
+print('Intercept: ', theta_0)
 
 # Step 4
 # Plot the fit line over the data
@@ -43,7 +43,7 @@ plt.scatter(train.ENGINESIZE, train.CO2EMISSIONS,  color='blue')
 plt.plot(train_x, theta_1[0][0]*train_x + theta_0[0], '-r')
 plt.xlabel("Engine size")
 plt.ylabel("Emission")
-# plt.show()
+plt.show()
 
 # Step 5
 # Get the Evaluation metrics
