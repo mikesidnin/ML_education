@@ -6,7 +6,7 @@ from sklearn.metrics import r2_score
 from sklearn.preprocessing import PolynomialFeatures
 
 # Read Dataset
-dataset = pd.read_csv("FuelConsumptionCo2.csv")
+dataset = pd.read_csv("../datasets/FuelConsumptionCo2.csv")
 dataframe = dataset[['ENGINESIZE', 'CYLINDERS', 'FUELCONSUMPTION_COMB', 'CO2EMISSIONS']]
 
 # Split to test and train data
