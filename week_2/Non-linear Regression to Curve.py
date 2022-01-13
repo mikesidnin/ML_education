@@ -64,6 +64,8 @@ plt.plot(plot_x, plot_y_sigmoid, '-b')
 plt.plot(plot_x, plot_y_polynomial, '-g')
 plt.show()
 
+print(type(fit_y_polynomial))
+
 print("MAE sigmoid: %.5f" % np.mean(np.absolute(fit_y_sigmoid - test_y)))
 print("MAE exponential: %.5f" % np.mean(np.absolute(fit_y_polynomial - test_y)))
 
