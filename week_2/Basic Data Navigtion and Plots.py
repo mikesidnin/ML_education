@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-df = pd.read_csv("FuelConsumptionCo2.csv")
+df = pd.read_csv("../datasets/FuelConsumptionCo2.csv")
 
 # take a look at the dataset
 print(df.head())

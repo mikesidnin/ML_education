@@ -4,7 +4,7 @@ import numpy as np
 from sklearn import linear_model
 from sklearn.metrics import r2_score
 
-dataset = pd.read_csv("FuelConsumptionCo2.csv")
+dataset = pd.read_csv("../datasets/FuelConsumptionCo2.csv")
 
 dataset_columns = dataset[['ENGINESIZE', 'CYLINDERS', 'FUELCONSUMPTION_COMB', 'CO2EMISSIONS']]
 
