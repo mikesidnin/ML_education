@@ -6,7 +6,7 @@ from sklearn import linear_model
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import PolynomialFeatures
 
-from week_2.functions.functions_methods import sigmoid, exponential
+from week_2.functions.functions_methods import sigmoid
 
 # Preparing dataset
 dataset = pd.read_csv("../datasets/china_gdp.csv")

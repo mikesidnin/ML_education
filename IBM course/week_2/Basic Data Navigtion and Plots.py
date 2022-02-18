@@ -7,7 +7,7 @@ df = pd.read_csv("../datasets/FuelConsumptionCo2.csv")
 # take a look at the dataset
 print(df.head())
 
-# summarize the data
+# summarize the dataйчй
 print(df.describe())
 
 # select columns and 9 rows
